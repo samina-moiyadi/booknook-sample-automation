@@ -13,7 +13,7 @@ import com.testautomation.bookstore.pageObjects.LoginPage;
 import com.testautomation.bookstore.pageObjects.RegistrationPage;
 import com.testautomation.bookstore.testComponents.BaseTest;
 
-public class AthenticationTest extends BaseTest {
+public class AuthenticationTest extends BaseTest {
 
 	RegistrationPage registrationPage;
 	LoginPage loginPage;
@@ -22,7 +22,7 @@ public class AthenticationTest extends BaseTest {
 	/*registration test cases*/
 	
 	//test for registration with valid data - positive
-	@Test(dataProvider = "getValidRegistrationData", groups = {"Registration"})
+	@Test(dataProvider = "getValidRegistrationData", groups = {"Registration"}, retryAnalyzer = (com.testautomation.bookstore.testComponents.Retry.class))
 	public void registerValidUserTest(Map<String, String> input) throws IOException {
 		registrationPage = new RegistrationPage(driver);
 		registrationPage.completeRegistration(

@@ -42,6 +42,12 @@ public class Listeners extends BaseTest implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
+		
+        if (result.getMethod().getRetryAnalyzer(result) != null) {
+            int currentRetry = ((com.testautomation.bookstore.testComponents.Retry) result.getMethod().getRetryAnalyzer(result)).getRetryCount();
+            System.out.println("Retry attempt " + currentRetry + " for test: " + result.getName());
+        }
+        
 		extentTest.get().fail(result.getThrowable());
 		try
 		{

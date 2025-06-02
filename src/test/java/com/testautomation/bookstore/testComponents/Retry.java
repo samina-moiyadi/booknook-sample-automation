@@ -5,19 +5,23 @@ import org.testng.ITestResult;
 
 public class Retry implements IRetryAnalyzer{
 
-	int count=0;
-	int maxTry=1;
+	private int retryCount=0;
+	private static final int maxRetryCount = 1;
 	
 	@Override
 	public boolean retry(ITestResult result) {
 		// TODO Auto-generated method stub
-		if(count<maxTry)
+		if(retryCount<maxRetryCount)
 		{
-			count++;
+			retryCount++;
 			return true;
 		}
 				
 		return false;
+	}
+	
+	public int getRetryCount() {
+	    return retryCount;
 	}
 
 }
