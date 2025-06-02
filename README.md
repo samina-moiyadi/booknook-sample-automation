@@ -6,11 +6,10 @@ This document outlines the key test cases covered in the Selenium + Java test au
 ---
 
 ## 🔐 Authentication
-- [ ] Register with valid and invalid inputs
-- [ ] Login with valid credentials
-- [ ] Login with invalid credentials
-- [ ] Reset password (if applicable)
-- [ ] Logout
+- [✅] Register with valid and invalid inputs
+- [✅] Login with valid credentials
+- [✅] Login with invalid credentials
+- [✅] Logout
 
 ---
 
