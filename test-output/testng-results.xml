@@ -2,27 +2,27 @@
 <testng-results ignored="0" total="23" passed="23" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-02T09:21:33 IST" name="Default suite" finished-at="2025-06-02T09:23:41 IST" duration-ms="127487">
+  <suite started-at="2025-06-02T11:03:36 IST" name="Default suite" finished-at="2025-06-02T11:11:05 IST" duration-ms="448609">
     <groups>
       <group name="Registration">
-        <method signature="AthenticationTest.registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" name="registerInvalidUserTest" class="com.testautomation.bookstore.tests.AthenticationTest"/>
-        <method signature="AthenticationTest.registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" name="registerValidUserTest" class="com.testautomation.bookstore.tests.AthenticationTest"/>
-        <method signature="AthenticationTest.registerWithDuplicateEmailTest()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" name="registerWithDuplicateEmailTest" class="com.testautomation.bookstore.tests.AthenticationTest"/>
+        <method signature="AuthenticationTest.registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" name="registerInvalidUserTest" class="com.testautomation.bookstore.tests.AuthenticationTest"/>
+        <method signature="AuthenticationTest.registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" name="registerValidUserTest" class="com.testautomation.bookstore.tests.AuthenticationTest"/>
+        <method signature="AuthenticationTest.registerWithDuplicateEmailTest()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" name="registerWithDuplicateEmailTest" class="com.testautomation.bookstore.tests.AuthenticationTest"/>
       </group> <!-- Registration -->
       <group name="Login">
-        <method signature="AthenticationTest.invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" name="invalidEmailFormat_showsFieldErrorTest" class="com.testautomation.bookstore.tests.AthenticationTest"/>
-        <method signature="AthenticationTest.invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" name="invalidLoginData_showsFormLevelErrorsTest" class="com.testautomation.bookstore.tests.AthenticationTest"/>
-        <method signature="AthenticationTest.loginValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" name="loginValidUserTest" class="com.testautomation.bookstore.tests.AthenticationTest"/>
-        <method signature="AthenticationTest.testLogout()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" name="testLogout" class="com.testautomation.bookstore.tests.AthenticationTest"/>
+        <method signature="AuthenticationTest.invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" name="invalidEmailFormat_showsFieldErrorTest" class="com.testautomation.bookstore.tests.AuthenticationTest"/>
+        <method signature="AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" name="invalidLoginData_showsFormLevelErrorsTest" class="com.testautomation.bookstore.tests.AuthenticationTest"/>
+        <method signature="AuthenticationTest.loginValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" name="loginValidUserTest" class="com.testautomation.bookstore.tests.AuthenticationTest"/>
+        <method signature="AuthenticationTest.testLogout()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" name="testLogout" class="com.testautomation.bookstore.tests.AuthenticationTest"/>
       </group> <!-- Login -->
     </groups>
-    <test started-at="2025-06-02T09:21:33 IST" name="Default test" finished-at="2025-06-02T09:23:41 IST" duration-ms="127487">
-      <class name="com.testautomation.bookstore.tests.AthenticationTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:33 IST" name="launchApplication" finished-at="2025-06-02T09:21:42 IST" duration-ms="8529" status="PASS">
+    <test started-at="2025-06-02T11:03:36 IST" name="Default test" finished-at="2025-06-02T11:11:05 IST" duration-ms="448609">
+      <class name="com.testautomation.bookstore.tests.AuthenticationTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:03:37 IST" name="launchApplication" finished-at="2025-06-02T11:03:52 IST" duration-ms="15814" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:42 IST" name="invalidEmailFormat_showsFieldErrorTest" data-provider="getInvalidEmailLoginData" finished-at="2025-06-02T09:21:43 IST" duration-ms="884" status="PASS">
+        <test-method signature="invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:03:52 IST" name="invalidEmailFormat_showsFieldErrorTest" data-provider="getInvalidEmailLoginData" finished-at="2025-06-02T11:03:54 IST" duration-ms="1346" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,15 +33,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidEmailFormat_showsFieldErrorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:43 IST" name="tearDown" finished-at="2025-06-02T09:21:43 IST" duration-ms="172" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:03:54 IST" name="tearDown" finished-at="2025-06-02T11:03:54 IST" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:43 IST" name="launchApplication" finished-at="2025-06-02T09:21:46 IST" duration-ms="3224" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:03:54 IST" name="launchApplication" finished-at="2025-06-02T11:04:06 IST" duration-ms="11738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:46 IST" name="invalidEmailFormat_showsFieldErrorTest" data-provider="getInvalidEmailLoginData" finished-at="2025-06-02T09:21:47 IST" duration-ms="725" status="PASS">
+        <test-method signature="invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:06 IST" name="invalidEmailFormat_showsFieldErrorTest" data-provider="getInvalidEmailLoginData" finished-at="2025-06-02T11:04:07 IST" duration-ms="1409" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -52,15 +52,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidEmailFormat_showsFieldErrorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:47 IST" name="tearDown" finished-at="2025-06-02T09:21:47 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:07 IST" name="tearDown" finished-at="2025-06-02T11:04:07 IST" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:47 IST" name="launchApplication" finished-at="2025-06-02T09:21:50 IST" duration-ms="3127" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:07 IST" name="launchApplication" finished-at="2025-06-02T11:04:26 IST" duration-ms="18890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:50 IST" name="invalidEmailFormat_showsFieldErrorTest" data-provider="getInvalidEmailLoginData" finished-at="2025-06-02T09:21:51 IST" duration-ms="658" status="PASS">
+        <test-method signature="invalidEmailFormat_showsFieldErrorTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:26 IST" name="invalidEmailFormat_showsFieldErrorTest" data-provider="getInvalidEmailLoginData" finished-at="2025-06-02T11:04:28 IST" duration-ms="1564" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,15 +71,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidEmailFormat_showsFieldErrorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:51 IST" name="tearDown" finished-at="2025-06-02T09:21:51 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:28 IST" name="tearDown" finished-at="2025-06-02T11:04:28 IST" duration-ms="181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:51 IST" name="launchApplication" finished-at="2025-06-02T09:21:56 IST" duration-ms="4486" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:28 IST" name="launchApplication" finished-at="2025-06-02T11:04:48 IST" duration-ms="19861" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:56 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T09:21:57 IST" duration-ms="1106" status="PASS">
+        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:48 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T11:04:50 IST" duration-ms="2503" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,15 +95,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginData_showsFormLevelErrorsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:57 IST" name="tearDown" finished-at="2025-06-02T09:21:57 IST" duration-ms="147" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:50 IST" name="tearDown" finished-at="2025-06-02T11:04:51 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:21:57 IST" name="launchApplication" finished-at="2025-06-02T09:22:02 IST" duration-ms="5101" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:04:51 IST" name="launchApplication" finished-at="2025-06-02T11:05:12 IST" duration-ms="21978" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:02 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T09:22:03 IST" duration-ms="1056" status="PASS">
+        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:05:12 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T11:05:15 IST" duration-ms="2232" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,15 +119,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginData_showsFormLevelErrorsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:03 IST" name="tearDown" finished-at="2025-06-02T09:22:03 IST" duration-ms="144" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:05:15 IST" name="tearDown" finished-at="2025-06-02T11:05:15 IST" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:03 IST" name="launchApplication" finished-at="2025-06-02T09:22:06 IST" duration-ms="3140" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:05:15 IST" name="launchApplication" finished-at="2025-06-02T11:05:36 IST" duration-ms="21133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:06 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T09:22:07 IST" duration-ms="1113" status="PASS">
+        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:05:36 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T11:05:39 IST" duration-ms="2689" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -143,15 +143,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginData_showsFormLevelErrorsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:07 IST" name="tearDown" finished-at="2025-06-02T09:22:08 IST" duration-ms="127" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:05:39 IST" name="tearDown" finished-at="2025-06-02T11:05:39 IST" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:08 IST" name="launchApplication" finished-at="2025-06-02T09:22:11 IST" duration-ms="3069" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:05:39 IST" name="launchApplication" finished-at="2025-06-02T11:05:59 IST" duration-ms="19848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:11 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T09:22:12 IST" duration-ms="1100" status="PASS">
+        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:05:59 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T11:06:02 IST" duration-ms="3078" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -167,15 +167,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginData_showsFormLevelErrorsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:12 IST" name="tearDown" finished-at="2025-06-02T09:22:12 IST" duration-ms="128" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:02 IST" name="tearDown" finished-at="2025-06-02T11:06:02 IST" duration-ms="173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:12 IST" name="launchApplication" finished-at="2025-06-02T09:22:15 IST" duration-ms="2872" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:02 IST" name="launchApplication" finished-at="2025-06-02T11:06:28 IST" duration-ms="26138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:15 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T09:22:16 IST" duration-ms="1134" status="PASS">
+        <test-method signature="invalidLoginData_showsFormLevelErrorsTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:28 IST" name="invalidLoginData_showsFormLevelErrorsTest" data-provider="getInvalidLoginData" finished-at="2025-06-02T11:06:31 IST" duration-ms="2517" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -191,15 +191,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginData_showsFormLevelErrorsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:16 IST" name="tearDown" finished-at="2025-06-02T09:22:16 IST" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:31 IST" name="tearDown" finished-at="2025-06-02T11:06:31 IST" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:16 IST" name="launchApplication" finished-at="2025-06-02T09:22:19 IST" duration-ms="3171" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:31 IST" name="launchApplication" finished-at="2025-06-02T11:06:52 IST" duration-ms="20677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:19 IST" name="loginValidUserTest" data-provider="getValidLoginData" finished-at="2025-06-02T09:22:21 IST" duration-ms="1425" status="PASS">
+        <test-method signature="loginValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:52 IST" name="loginValidUserTest" data-provider="getValidLoginData" finished-at="2025-06-02T11:06:54 IST" duration-ms="2526" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -210,15 +210,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:21 IST" name="tearDown" finished-at="2025-06-02T09:22:21 IST" duration-ms="137" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:54 IST" name="tearDown" finished-at="2025-06-02T11:06:54 IST" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:21 IST" name="launchApplication" finished-at="2025-06-02T09:22:24 IST" duration-ms="3150" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:54 IST" name="launchApplication" finished-at="2025-06-02T11:06:58 IST" duration-ms="3791" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:24 IST" name="loginValidUserTest" data-provider="getValidLoginData" finished-at="2025-06-02T09:22:25 IST" duration-ms="1441" status="PASS">
+        <test-method signature="loginValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:06:58 IST" name="loginValidUserTest" data-provider="getValidLoginData" finished-at="2025-06-02T11:07:00 IST" duration-ms="1956" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,15 +229,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:25 IST" name="tearDown" finished-at="2025-06-02T09:22:25 IST" duration-ms="155" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:00 IST" name="tearDown" finished-at="2025-06-02T11:07:00 IST" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:26 IST" name="launchApplication" finished-at="2025-06-02T09:22:29 IST" duration-ms="3027" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:00 IST" name="launchApplication" finished-at="2025-06-02T11:07:04 IST" duration-ms="3605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:29 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:22:30 IST" duration-ms="1025" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:04 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:07:05 IST" duration-ms="1417" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -253,15 +253,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:30 IST" name="tearDown" finished-at="2025-06-02T09:22:30 IST" duration-ms="158" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:05 IST" name="tearDown" finished-at="2025-06-02T11:07:05 IST" duration-ms="173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:30 IST" name="launchApplication" finished-at="2025-06-02T09:22:33 IST" duration-ms="3130" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:05 IST" name="launchApplication" finished-at="2025-06-02T11:07:21 IST" duration-ms="15875" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:33 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:22:34 IST" duration-ms="965" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:21 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:07:23 IST" duration-ms="1982" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,15 +277,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:34 IST" name="tearDown" finished-at="2025-06-02T09:22:34 IST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:23 IST" name="tearDown" finished-at="2025-06-02T11:07:23 IST" duration-ms="180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:34 IST" name="launchApplication" finished-at="2025-06-02T09:22:38 IST" duration-ms="4077" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:23 IST" name="launchApplication" finished-at="2025-06-02T11:07:34 IST" duration-ms="10245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:38 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:22:39 IST" duration-ms="981" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:34 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:07:35 IST" duration-ms="1657" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -301,15 +301,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:39 IST" name="tearDown" finished-at="2025-06-02T09:22:39 IST" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:35 IST" name="tearDown" finished-at="2025-06-02T11:07:36 IST" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:39 IST" name="launchApplication" finished-at="2025-06-02T09:22:42 IST" duration-ms="3250" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:36 IST" name="launchApplication" finished-at="2025-06-02T11:07:58 IST" duration-ms="22570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:42 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:22:43 IST" duration-ms="930" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:07:58 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:08:00 IST" duration-ms="1724" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -325,15 +325,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:43 IST" name="tearDown" finished-at="2025-06-02T09:22:44 IST" duration-ms="134" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:00 IST" name="tearDown" finished-at="2025-06-02T11:08:00 IST" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:44 IST" name="launchApplication" finished-at="2025-06-02T09:22:47 IST" duration-ms="3234" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:00 IST" name="launchApplication" finished-at="2025-06-02T11:08:15 IST" duration-ms="14553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:47 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:22:48 IST" duration-ms="953" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:15 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:08:16 IST" duration-ms="1624" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -349,15 +349,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:48 IST" name="tearDown" finished-at="2025-06-02T09:22:48 IST" duration-ms="136" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:16 IST" name="tearDown" finished-at="2025-06-02T11:08:16 IST" duration-ms="177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:48 IST" name="launchApplication" finished-at="2025-06-02T09:22:51 IST" duration-ms="3013" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:16 IST" name="launchApplication" finished-at="2025-06-02T11:08:31 IST" duration-ms="14765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:51 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:22:52 IST" duration-ms="935" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:31 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:08:33 IST" duration-ms="1858" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -373,15 +373,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:52 IST" name="tearDown" finished-at="2025-06-02T09:22:52 IST" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:33 IST" name="tearDown" finished-at="2025-06-02T11:08:33 IST" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:22:52 IST" name="launchApplication" finished-at="2025-06-02T09:23:01 IST" duration-ms="9308" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:33 IST" name="launchApplication" finished-at="2025-06-02T11:08:44 IST" duration-ms="10683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:01 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:23:02 IST" duration-ms="1000" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:44 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:08:46 IST" duration-ms="1725" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -397,15 +397,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:02 IST" name="tearDown" finished-at="2025-06-02T09:23:02 IST" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:46 IST" name="tearDown" finished-at="2025-06-02T11:08:46 IST" duration-ms="173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:02 IST" name="launchApplication" finished-at="2025-06-02T09:23:05 IST" duration-ms="3088" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:08:46 IST" name="launchApplication" finished-at="2025-06-02T11:09:03 IST" duration-ms="17174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:05 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T09:23:06 IST" duration-ms="931" status="PASS">
+        <test-method signature="registerInvalidUserTest(java.util.Map,java.util.List)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:03 IST" name="registerInvalidUserTest" data-provider="getInvalidRegistrationData" finished-at="2025-06-02T11:09:05 IST" duration-ms="1866" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -421,92 +421,92 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerInvalidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:06 IST" name="tearDown" finished-at="2025-06-02T09:23:07 IST" duration-ms="127" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:05 IST" name="tearDown" finished-at="2025-06-02T11:09:05 IST" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:07 IST" name="launchApplication" finished-at="2025-06-02T09:23:10 IST" duration-ms="3625" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:05 IST" name="launchApplication" finished-at="2025-06-02T11:09:26 IST" duration-ms="20641" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:10 IST" name="registerValidUserTest" data-provider="getValidRegistrationData" finished-at="2025-06-02T09:23:13 IST" duration-ms="3190" status="PASS">
+        <test-method signature="registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:26 IST" name="registerValidUserTest" data-provider="getValidRegistrationData" finished-at="2025-06-02T11:09:31 IST" duration-ms="5497" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{gender=Female, fName=Cone, lName=Done, email=CDone@email.com, password=C1Done, confirmPwd=C1Done}]]>
+                <![CDATA[{gender=Female, fName=Cfour, lName=Dfour, email=CDfour@email.com, password=C4Dfour, confirmPwd=C4Dfour}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:13 IST" name="tearDown" finished-at="2025-06-02T09:23:13 IST" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:31 IST" name="tearDown" finished-at="2025-06-02T11:09:31 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:13 IST" name="launchApplication" finished-at="2025-06-02T09:23:18 IST" duration-ms="4962" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:31 IST" name="launchApplication" finished-at="2025-06-02T11:09:50 IST" duration-ms="19013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:18 IST" name="registerValidUserTest" data-provider="getValidRegistrationData" finished-at="2025-06-02T09:23:21 IST" duration-ms="2638" status="PASS">
+        <test-method signature="registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:50 IST" name="registerValidUserTest" data-provider="getValidRegistrationData" finished-at="2025-06-02T11:09:55 IST" duration-ms="4451" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{gender=Male, fName=Ctwo, lName=Dtwo, email=CDtwo@email.com, password=C2Dtwo, confirmPwd=C2Dtwo}]]>
+                <![CDATA[{gender=Male, fName=Cfive, lName=Dfive, email=CDfive@email.com, password=C5Dfive, confirmPwd=C5Dfive}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:21 IST" name="tearDown" finished-at="2025-06-02T09:23:21 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:55 IST" name="tearDown" finished-at="2025-06-02T11:09:55 IST" duration-ms="175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:21 IST" name="launchApplication" finished-at="2025-06-02T09:23:24 IST" duration-ms="3046" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:09:55 IST" name="launchApplication" finished-at="2025-06-02T11:10:11 IST" duration-ms="16265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:24 IST" name="registerValidUserTest" data-provider="getValidRegistrationData" finished-at="2025-06-02T09:23:27 IST" duration-ms="2568" status="PASS">
+        <test-method signature="registerValidUserTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:10:11 IST" name="registerValidUserTest" data-provider="getValidRegistrationData" finished-at="2025-06-02T11:10:16 IST" duration-ms="5233" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{gender=, fName=Cthree, lName=Dthree, email=CDthree@email.com, password=C3Dthree, confirmPwd=C3Dthree}]]>
+                <![CDATA[{gender=, fName=Csix, lName=Dsix, email=CDsix@email.com, password=C6Dsix, confirmPwd=C6Dsix}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerValidUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:27 IST" name="tearDown" finished-at="2025-06-02T09:23:27 IST" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:10:16 IST" name="tearDown" finished-at="2025-06-02T11:10:17 IST" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:27 IST" name="launchApplication" finished-at="2025-06-02T09:23:30 IST" duration-ms="2928" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:10:17 IST" name="launchApplication" finished-at="2025-06-02T11:10:37 IST" duration-ms="20049" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="registerWithDuplicateEmailTest()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:30 IST" name="registerWithDuplicateEmailTest" finished-at="2025-06-02T09:23:35 IST" duration-ms="5037" status="PASS">
+        <test-method signature="registerWithDuplicateEmailTest()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:10:37 IST" name="registerWithDuplicateEmailTest" finished-at="2025-06-02T11:10:45 IST" duration-ms="8340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWithDuplicateEmailTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:35 IST" name="tearDown" finished-at="2025-06-02T09:23:35 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:10:45 IST" name="tearDown" finished-at="2025-06-02T11:10:45 IST" duration-ms="190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:35 IST" name="launchApplication" finished-at="2025-06-02T09:23:38 IST" duration-ms="3032" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:10:45 IST" name="launchApplication" finished-at="2025-06-02T11:11:01 IST" duration-ms="15981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testLogout()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:38 IST" name="testLogout" finished-at="2025-06-02T09:23:41 IST" duration-ms="2456" status="PASS">
+        <test-method signature="testLogout()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:11:01 IST" name="testLogout" finished-at="2025-06-02T11:11:05 IST" duration-ms="3504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AthenticationTest@1573f9fc]" started-at="2025-06-02T09:23:41 IST" name="tearDown" finished-at="2025-06-02T09:23:41 IST" duration-ms="143" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.AuthenticationTest@dd05255]" started-at="2025-06-02T11:11:05 IST" name="tearDown" finished-at="2025-06-02T11:11:05 IST" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.testautomation.bookstore.tests.AthenticationTest -->
+      </class> <!-- com.testautomation.bookstore.tests.AuthenticationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

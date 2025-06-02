@@ -1,0 +1,26 @@
+[
+	{
+		"gender":"Female",
+		"fName":"Cfour",
+		"lName":"Dfour",
+		"email":"CDfour@email.com",
+		"password":"C4Dfour",
+		"confirmPwd":"C4Dfour"
+	},
+	{
+		"gender":"Male",
+		"fName":"Cfive",
+		"lName":"Dfive",
+		"email":"CDfive@email.com",
+		"password":"C5Dfive",
+		"confirmPwd":"C5Dfive"
+	},
+	{
+		"gender":"",
+		"fName":"Csix",
+		"lName":"Dsix",
+		"email":"CDsix@email.com",
+		"password":"C6Dsix",
+		"confirmPwd":"C6Dsix"
+	}
+]

@@ -5,14 +5,15 @@ import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
-import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.testautomation.bookstore.pageObjects.LoginPage;
 import com.testautomation.bookstore.pageObjects.RegistrationPage;
 import com.testautomation.bookstore.testComponents.BaseTest;
 
+@Listeners(com.testautomation.bookstore.testComponents.Listeners.class)
 public class AuthenticationTest extends BaseTest {
 
 	RegistrationPage registrationPage;
@@ -33,13 +34,13 @@ public class AuthenticationTest extends BaseTest {
 				input.get("password"),
 				input.get("confirmPwd")
 		);
-		AssertJUnit.assertEquals(registrationPage.getRegComText(), "Your registration completed");
+		Assert.assertEquals(registrationPage.getRegComText(), "Your registration completed");
 	}
 	
 	//data provider method for registration with valid data
 	@DataProvider
 	public Object[][] getValidRegistrationData() throws IOException {
-		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//ValidRegistrationData.json");
+		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//ValidRegistrationData.json");
 		Object[][] testData = new Object[data.size()][1];
 	    for (int i = 0; i < data.size(); i++) {
 	        testData[i][0] = data.get(i);
@@ -69,7 +70,7 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for registration with invalid data (field level validation)
 	@DataProvider
 	public Object[][] getInvalidRegistrationData() throws IOException {
-			List<Map<String, Object>> testData = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//InvalidRegistrationData.json");
+			List<Map<String, Object>> testData = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidRegistrationData.json");
 		    Object[][] data = new Object[testData.size()][2];
 
 		    for (int i = 0; i < testData.size(); i++) {
@@ -117,7 +118,7 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for login with valid data
 	@DataProvider
 	public Object[][] getValidLoginData() throws IOException {
-		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//ValidLoginData.json");
+		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//ValidLoginData.json");
 		Object[][] testData = new Object[data.size()][1];
 	    for (int i = 0; i < data.size(); i++) {
 	        testData[i][0] = data.get(i);
@@ -141,7 +142,7 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for login with invalid email data
 	@DataProvider
 	public Object[][] getInvalidEmailLoginData() throws IOException {
-		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//InvalidEmailLoginData.json");
+		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidEmailLoginData.json");
 		Object[][] testData = new Object[data.size()][1];
 	    for (int i = 0; i < data.size(); i++) {
 	        testData[i][0] = data.get(i);
@@ -170,7 +171,7 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for login with empty password data
 	@DataProvider
 	public Object[][] getInvalidLoginData() throws IOException {
-		List<Map<String, Object>> testData = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//InvalidLoginData.json");
+		List<Map<String, Object>> testData = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidLoginData.json");
 	    Object[][] data = new Object[testData.size()][2];
 
 	    for (int i = 0; i < testData.size(); i++) {
