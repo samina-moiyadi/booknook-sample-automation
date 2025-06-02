@@ -1,0 +1,113 @@
+[
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"",
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password":"A3Bthree",
+		"confirmPwd":"A3Bthree"
+	},
+	"expectedErrors": [
+	  "First name is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"",
+		"email":"ABthree@email.com",
+		"password":"A3Bthree",
+		"confirmPwd":"A3Bthree"
+	},
+	"expectedErrors": [
+	  "Last name is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Female",
+		"fName":"Athree",
+		"lName":"BThree",
+		"email":"",
+		"password":"A3Bthree",
+		"confirmPwd":"A3Bthree"
+	},
+	"expectedErrors": [
+	  "Email is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"Bthree",
+		"email":"AB.com",
+		"password":"A3Bthree",
+		"confirmPwd":"A3Bthree"
+	},
+	"expectedErrors": [
+	  "Wrong email"
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password":"",
+		"confirmPwd":""
+	},
+	"expectedErrors": [
+	  "Password is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password":"A3B",
+		"confirmPwd":"A3B"
+	},
+	"expectedErrors": [
+	  "The password should have at least 6 characters."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password":"A3Bthree",
+		"confirmPwd":"A3B"
+	},
+	"expectedErrors": [
+	  "The password and confirmation password do not match."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password":"A3Bthree",
+		"confirmPwd":""
+	},
+	"expectedErrors": [
+	  "Password is required."
+	]
+	}
+]

@@ -1,0 +1,26 @@
+[
+	{
+		"gender":"Female",
+		"fName":"Cone",
+		"lName":"Done",
+		"email":"CDone@email.com",
+		"password":"C1Done",
+		"confirmPwd":"C1Done"
+	},
+	{
+		"gender":"Male",
+		"fName":"Ctwo",
+		"lName":"Dtwo",
+		"email":"CDtwo@email.com",
+		"password":"C2Dtwo",
+		"confirmPwd":"C2Dtwo"
+	},
+	{
+		"gender":"",
+		"fName":"Cthree",
+		"lName":"Dthree",
+		"email":"CDthree@email.com",
+		"password":"C3Dthree",
+		"confirmPwd":"C3Dthree"
+	}
+]
