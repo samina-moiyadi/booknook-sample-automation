@@ -13,10 +13,9 @@ This document outlines the key test cases covered in the Selenium + Java test au
 
 ---
 
-## 🔎 Book Search & Navigation
-- [ ] Search by book title
-- [ ] Search by author name
-- [ ] Search with no results
+## 🔎 Book (Product) Search & Navigation
+- [✅] Search by book title
+- [✅] Search with no results
 - [ ] Filter by genre/category
 - [ ] Sort by price or rating
 - [ ] View book details
