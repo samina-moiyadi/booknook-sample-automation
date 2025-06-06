@@ -1,6 +1,7 @@
 package com.testautomation.bookstore.abstractComponents;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,6 +39,13 @@ public class AbstractComponents {
 	{
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(ele));
+	}
+	
+    //explicit wait for visibility of list of WebElements method
+	public void waitForElementToAppear(List<WebElement> eles)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfAllElements(eles));
 	}
 	
 	//go to registration page method

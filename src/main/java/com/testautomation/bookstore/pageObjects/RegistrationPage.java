@@ -151,8 +151,7 @@ public class RegistrationPage extends AbstractComponents{
     //get duplicate email id error message method
     public String getDuplicateEmailError() {
     	waitForElementToAppear(errorValSum);
-    	String errorMsg = errorValSum.getText();
-    	return errorMsg;
+    	return errorValSum.getText();
     }
 
     //logging off and back to registration page after registration method

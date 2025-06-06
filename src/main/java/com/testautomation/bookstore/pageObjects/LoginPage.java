@@ -20,6 +20,9 @@ public class LoginPage extends AbstractComponents{
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+    
+    /*object creation*/
+    HomePage homePage;
 	
 	/*web element creation*/
 	
@@ -79,30 +82,29 @@ public class LoginPage extends AbstractComponents{
     }
     
     //login method
-    public void login(String email, String password) {
+    public HomePage login(String email, String password) {
     	goToLoginPage();
     	enterLoginEmail(email);
     	enterLoginPassword(password);
     	clickLogin();
+    	homePage = new HomePage(driver);
+    	return homePage;
     }
     
     //get email id text for successful login verification method
     public String getEmailTextOnSuccess() {
     	waitForElementToAppear(emailVerify);
-    	String successEmailText = emailVerify.getText();
-    	return successEmailText;
+    	return emailVerify.getText();
     }
     
     //get wrong email id entered error message method
     public String getWrongEmailError() {
-    	String errorEmail = emailError.getText();
-    	return errorEmail;
+    	return emailError.getText();
     }
     
     //get span (form level validation) error message method
     public String getSpanLoginError() {
-    	String errorSpanLogin = spanLoginError.getText();
-    	return errorSpanLogin;
+    	return spanLoginError.getText();
     }
     
     //get all li (form level validation) error message method
@@ -116,8 +118,7 @@ public class LoginPage extends AbstractComponents{
     	waitForElementToAppear(logoutButton);
     	logoutButton.click();
     	waitForElementToAppear(loginButton);
-    	String successLogoutText = loginButton.getText();
-    	return successLogoutText;
+    	return loginButton.getText();
     }
     
 }
