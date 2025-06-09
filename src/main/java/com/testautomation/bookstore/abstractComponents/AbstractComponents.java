@@ -42,7 +42,7 @@ public class AbstractComponents {
 	}
 	
     //explicit wait for visibility of list of WebElements method
-	public void waitForElementToAppear(List<WebElement> eles)
+	public void waitForElementsToAppear(List<WebElement> eles)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElements(eles));

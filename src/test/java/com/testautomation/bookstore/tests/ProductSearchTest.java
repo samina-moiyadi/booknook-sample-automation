@@ -19,7 +19,7 @@ public class ProductSearchTest extends BaseTest{
 	HomePage homePage;
 	
 	//test for product search with valid data
-	//@Test(dataProvider = "getValidSearchData", groups = {"SearchProduct"})
+	@Test(dataProvider = "getValidSearchData", groups = {"SearchProduct"})
 	public void selectProductByValidSearchTest(Map<String, String> input) {
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.login("ABone@email.com", "A1Bone");

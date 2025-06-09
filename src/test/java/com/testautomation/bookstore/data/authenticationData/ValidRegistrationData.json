@@ -1,26 +1,18 @@
 [
 	{
 		"gender":"Female",
-		"fName":"Cfour",
-		"lName":"Dfour",
-		"email":"CDfour@email.com",
-		"password":"C4Dfour",
-		"confirmPwd":"C4Dfour"
+		"fName":"Efour",
+		"lName":"Ffour",
+		"email":"EFfour@email.com",
+		"password":"E4Ffour",
+		"confirmPwd":"E4Ffour"
 	},
 	{
 		"gender":"Male",
-		"fName":"Cfive",
-		"lName":"Dfive",
-		"email":"CDfive@email.com",
-		"password":"C5Dfive",
-		"confirmPwd":"C5Dfive"
-	},
-	{
-		"gender":"",
-		"fName":"Csix",
-		"lName":"Dsix",
-		"email":"CDsix@email.com",
-		"password":"C6Dsix",
-		"confirmPwd":"C6Dsix"
+		"fName":"Efive",
+		"lName":"Ffive",
+		"email":"EFfive@email.com",
+		"password":"E5Ffive",
+		"confirmPwd":"E5Ffive"
 	}
 ]

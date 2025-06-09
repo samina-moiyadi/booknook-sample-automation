@@ -47,27 +47,27 @@ public class HomePage extends AbstractComponents {
 	@FindBy(css = ".result")
 	WebElement searchErrorMessage;
 	
-	
+	//breadcrumb text
+	@FindBy(css = ".current-item")
+	WebElement breadcrumbNavText;
 
 	/* method creation */
 
-	// get category list method
-	public List<WebElement> getCategoryList() {
-		return categories;
-	}
-
 	// select category by name method
-	public void getCatogoryByName(String categoryName) {
+	public String getCatogoryByName(String categoryName) {
+		waitForElementsToAppear(categories);
 		WebElement cat = categories.stream()
-				.filter(category -> category.findElement(By.cssSelector("a")).getText().equals(categoryName))
+				.filter(category -> category.findElement(By.cssSelector("a")).getText()
+				.trim().equalsIgnoreCase(categoryName))
 				.findFirst().orElse(null);
 		cat.click();
+		return breadcrumbNavText.getText();
 	}
 
 	// search by partial text method
 	public String searchWithPartialText(String searchText, String productName) {
 		searchBar.sendKeys(searchText);
-		waitForElementToAppear(searchAutoSuggProducts);
+		waitForElementsToAppear(searchAutoSuggProducts);
 		WebElement product = searchAutoSuggProducts.stream()
 				.filter(pro->pro.findElement(By.cssSelector("a")).getText()
 				.trim().contains(productName))

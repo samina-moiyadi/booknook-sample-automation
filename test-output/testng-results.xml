@@ -1,73 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-06T13:42:56 IST" name="Default suite" finished-at="2025-06-06T13:43:18 IST" duration-ms="22246">
+  <suite started-at="2025-06-09T14:41:56 IST" name="Default suite" finished-at="2025-06-09T14:42:02 IST" duration-ms="6149">
     <groups>
-      <group name="SearchProduct">
-        <method signature="ProductSearchTest.selectProductByNonExistantSearchTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" name="selectProductByNonExistantSearchTest" class="com.testautomation.bookstore.tests.ProductSearchTest"/>
-      </group> <!-- SearchProduct -->
+      <group name="BookShopping">
+        <method signature="BookShopTest.bookPageNavigation()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" name="bookPageNavigation" class="com.testautomation.bookstore.tests.BookShopTest"/>
+      </group> <!-- BookShopping -->
     </groups>
-    <test started-at="2025-06-06T13:42:56 IST" name="Default test" finished-at="2025-06-06T13:43:18 IST" duration-ms="22246">
-      <class name="com.testautomation.bookstore.tests.ProductSearchTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:42:57 IST" name="launchApplication" finished-at="2025-06-06T13:43:04 IST" duration-ms="7286" status="PASS">
+    <test started-at="2025-06-09T14:41:56 IST" name="Default test" finished-at="2025-06-09T14:42:02 IST" duration-ms="6149">
+      <class name="com.testautomation.bookstore.tests.BookShopTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" started-at="2025-06-09T14:41:56 IST" name="launchApplication" finished-at="2025-06-09T14:42:00 IST" duration-ms="3872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="selectProductByNonExistantSearchTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:04 IST" name="selectProductByNonExistantSearchTest" data-provider="getNonExistantSearchData" finished-at="2025-06-06T13:43:07 IST" duration-ms="2725" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{searchText=uvw}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="bookPageNavigation()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" started-at="2025-06-09T14:42:00 IST" name="bookPageNavigation" finished-at="2025-06-09T14:42:02 IST" duration-ms="2011" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectProductByNonExistantSearchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:07 IST" name="tearDown" finished-at="2025-06-06T13:43:07 IST" duration-ms="213" status="PASS">
+        </test-method> <!-- bookPageNavigation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" started-at="2025-06-09T14:42:02 IST" name="tearDown" finished-at="2025-06-09T14:42:02 IST" duration-ms="229" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:07 IST" name="launchApplication" finished-at="2025-06-06T13:43:10 IST" duration-ms="3159" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="selectProductByNonExistantSearchTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:10 IST" name="selectProductByNonExistantSearchTest" data-provider="getNonExistantSearchData" finished-at="2025-06-06T13:43:12 IST" duration-ms="2537" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{searchText=efg}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectProductByNonExistantSearchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:12 IST" name="tearDown" finished-at="2025-06-06T13:43:13 IST" duration-ms="167" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:13 IST" name="launchApplication" finished-at="2025-06-06T13:43:16 IST" duration-ms="3223" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="selectProductByNonExistantSearchTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:16 IST" name="selectProductByNonExistantSearchTest" data-provider="getNonExistantSearchData" finished-at="2025-06-06T13:43:18 IST" duration-ms="2396" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{searchText=ljk}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectProductByNonExistantSearchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@7586beff]" started-at="2025-06-06T13:43:18 IST" name="tearDown" finished-at="2025-06-06T13:43:18 IST" duration-ms="156" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.testautomation.bookstore.tests.ProductSearchTest -->
+      </class> <!-- com.testautomation.bookstore.tests.BookShopTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

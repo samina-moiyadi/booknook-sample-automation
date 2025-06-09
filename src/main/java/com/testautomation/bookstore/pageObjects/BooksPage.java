@@ -23,6 +23,8 @@ public class BooksPage extends AbstractComponents{
     
     
 	/*WebElement creation*/
+    
+    //page title
 	
 	//get a list of books
 	@FindBy(css = ".product-title")
