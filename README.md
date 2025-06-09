@@ -19,6 +19,13 @@ This document outlines the key test cases covered in the Selenium + Java test au
 
 ---
 
+## 📖Book Page Navigation & Page Load
+- [✅] Verify that clicking on the "Books" category from the homepage opens the Books page.
+- [✅] Verify that the page title is correct (e.g., "Books").
+- [✅] Verify that the breadcrumb navigation displays the correct path (e.g., Home > Books).
+
+---
+
 ## 📖Book shopping
 - [ ] Filter by genre/category
 - [ ] Sort by price or rating
