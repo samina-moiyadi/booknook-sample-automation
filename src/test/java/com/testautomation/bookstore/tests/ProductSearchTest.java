@@ -9,20 +9,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.testautomation.bookstore.pageObjects.HomePage;
-import com.testautomation.bookstore.pageObjects.LoginPage;
 import com.testautomation.bookstore.testComponents.BaseTest;
 
 @Listeners(com.testautomation.bookstore.testComponents.Listeners.class)
 public class ProductSearchTest extends BaseTest{
-	LoginPage loginPage;
-	HomePage homePage;
 	
 	//test for product search with valid data
-	@Test(dataProvider = "getValidSearchData", groups = {"SearchProduct"})
+	@Test(dataProvider = "getValidSearchData", groups = {"SearchProduct","requires-login"})
 	public void selectProductByValidSearchTest(Map<String, String> input) {
-		loginPage = new LoginPage(driver);
-		homePage = loginPage.login("ABone@email.com", "A1Bone");
 		String text = homePage.searchWithPartialText(
 				input.get("searchText"),
 				input.get("productName")
@@ -42,10 +36,8 @@ public class ProductSearchTest extends BaseTest{
 	}
 	
 	//test for product search with non-existant data
-	@Test(dataProvider = "getNonExistantSearchData", groups = {"SearchProduct"})
+	@Test(dataProvider = "getNonExistantSearchData", groups = {"SearchProduct","requires-login"})
 	public void selectProductByNonExistantSearchTest(Map<String, String> input) {
-		loginPage = new LoginPage(driver);
-		homePage = loginPage.login("ABone@email.com", "A1Bone");
 		String error = homePage.searchWithNonExistantProduct(
 				input.get("searchText")
 			);

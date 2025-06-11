@@ -1,28 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-09T14:41:56 IST" name="Default suite" finished-at="2025-06-09T14:42:02 IST" duration-ms="6149">
+  <suite started-at="2025-06-11T10:35:07 IST" name="Default suite" finished-at="2025-06-11T10:35:20 IST" duration-ms="12823">
     <groups>
-      <group name="BookShopping">
-        <method signature="BookShopTest.bookPageNavigation()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" name="bookPageNavigation" class="com.testautomation.bookstore.tests.BookShopTest"/>
-      </group> <!-- BookShopping -->
+      <group name="requires-login">
+        <method signature="ProductShopTest.categoryPageNavigation(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" name="categoryPageNavigation" class="com.testautomation.bookstore.tests.ProductShopTest"/>
+      </group> <!-- requires-login -->
+      <group name="CategoryNavigation">
+        <method signature="ProductShopTest.categoryPageNavigation(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" name="categoryPageNavigation" class="com.testautomation.bookstore.tests.ProductShopTest"/>
+      </group> <!-- CategoryNavigation -->
     </groups>
-    <test started-at="2025-06-09T14:41:56 IST" name="Default test" finished-at="2025-06-09T14:42:02 IST" duration-ms="6149">
-      <class name="com.testautomation.bookstore.tests.BookShopTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" started-at="2025-06-09T14:41:56 IST" name="launchApplication" finished-at="2025-06-09T14:42:00 IST" duration-ms="3872" status="PASS">
+    <test started-at="2025-06-11T10:35:07 IST" name="Default test" finished-at="2025-06-11T10:35:20 IST" duration-ms="12823">
+      <class name="com.testautomation.bookstore.tests.ProductShopTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:07 IST" name="launchApplication" finished-at="2025-06-11T10:35:11 IST" duration-ms="3671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="bookPageNavigation()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" started-at="2025-06-09T14:42:00 IST" name="bookPageNavigation" finished-at="2025-06-09T14:42:02 IST" duration-ms="2011" status="PASS">
+        <test-method is-config="true" signature="loginIfRequired()[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:11 IST" name="loginIfRequired" finished-at="2025-06-11T10:35:12 IST" duration-ms="1305" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookPageNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.BookShopTest@3c41ed1d]" started-at="2025-06-09T14:42:02 IST" name="tearDown" finished-at="2025-06-09T14:42:02 IST" duration-ms="229" status="PASS">
+        </test-method> <!-- loginIfRequired -->
+        <test-method signature="categoryPageNavigation(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:12 IST" name="categoryPageNavigation" data-provider="getCategory" finished-at="2025-06-11T10:35:14 IST" duration-ms="1335" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{category=Gift Cards}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- categoryPageNavigation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:14 IST" name="tearDown" finished-at="2025-06-11T10:35:14 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.testautomation.bookstore.tests.BookShopTest -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:14 IST" name="launchApplication" finished-at="2025-06-11T10:35:17 IST" duration-ms="3034" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="loginIfRequired()[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:17 IST" name="loginIfRequired" finished-at="2025-06-11T10:35:17 IST" duration-ms="659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIfRequired -->
+        <test-method signature="categoryPageNavigation(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:17 IST" name="categoryPageNavigation" data-provider="getCategory" finished-at="2025-06-11T10:35:20 IST" duration-ms="2330" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{category=Jewelry}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- categoryPageNavigation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductShopTest@2f4948e4]" started-at="2025-06-11T10:35:20 IST" name="tearDown" finished-at="2025-06-11T10:35:20 IST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.testautomation.bookstore.tests.ProductShopTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

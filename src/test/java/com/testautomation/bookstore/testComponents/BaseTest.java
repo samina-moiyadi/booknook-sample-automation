@@ -22,6 +22,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.testautomation.bookstore.pageObjects.HomePage;
 import com.testautomation.bookstore.pageObjects.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -30,6 +31,7 @@ public class BaseTest {
 
 	public WebDriver driver;
 	public LoginPage loginPage;
+	public HomePage homePage;
 
 	public WebDriver initializeDriver() throws IOException {
 
@@ -95,6 +97,12 @@ public class BaseTest {
 		if (driver != null) {
 	        driver.quit();
 	    }
+	}
+	
+	@BeforeMethod(alwaysRun = true, onlyForGroups = {"requires-login"})
+	public void loginIfRequired() {
+	    LoginPage loginPage = new LoginPage(driver);
+	    homePage = loginPage.login("ABone@email.com", "A1Bone");
 	}
 
 	public static String getScreenshot(String testCaseName, WebDriver driver) throws IOException {

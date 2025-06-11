@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testautomation.bookstore.tests.BookShopTest">
+      <class name="com.testautomation.bookstore.tests.ProductShopTest">
         <methods>
           <include name="tearDown"/>
-          <include name="bookPageNavigation"/>
           <include name="launchApplication"/>
+          <include name="categoryPageNavigation" invocation-numbers="3"/>
         </methods>
-      </class> <!-- com.testautomation.bookstore.tests.BookShopTest -->
+      </class> <!-- com.testautomation.bookstore.tests.ProductShopTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

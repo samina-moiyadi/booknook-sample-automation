@@ -23,10 +23,6 @@ public class HomePage extends AbstractComponents {
 
 	/* WebElement creation */
 
-	// list of categories
-	@FindBy(xpath = "//ul[@class='top-menu']/li")
-	List<WebElement> categories;
-
 	// search bar
 	@FindBy(id = "small-searchterms")
 	WebElement searchBar;
@@ -55,12 +51,13 @@ public class HomePage extends AbstractComponents {
 
 	// select category by name method
 	public String getCatogoryByName(String categoryName) {
-		waitForElementsToAppear(categories);
+		List<WebElement> categories = driver.findElements(By.xpath("//ul[@class='top-menu']/li"));
 		WebElement cat = categories.stream()
 				.filter(category -> category.findElement(By.cssSelector("a")).getText()
 				.trim().equalsIgnoreCase(categoryName))
 				.findFirst().orElse(null);
 		cat.click();
+		waitForElementToAppear(breadcrumbNavText);
 		return breadcrumbNavText.getText();
 	}
 
