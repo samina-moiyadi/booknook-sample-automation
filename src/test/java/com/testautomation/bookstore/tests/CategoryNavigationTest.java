@@ -12,7 +12,7 @@ import org.testng.asserts.SoftAssert;
 import com.testautomation.bookstore.testComponents.BaseTest;
 
 @Listeners(com.testautomation.bookstore.testComponents.Listeners.class)
-public class ProductShopTest extends BaseTest{
+public class CategoryNavigationTest extends BaseTest{
 	SoftAssert a = new SoftAssert();
 	
 	//test for checking successful navigation to the various categories
