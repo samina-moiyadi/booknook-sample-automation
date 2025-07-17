@@ -1,6 +1,10 @@
 [
 	{
-		"searchText": null,
+		"searchText": "abc",
+		"productName": null
+	},
+	{
+		"searchText": "xyz",
 		"productName": null
 	}
 ]

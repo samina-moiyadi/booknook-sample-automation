@@ -2,7 +2,7 @@ package com.testautomation.bookstore.pageObjects;
 
 import java.util.List;
 import org.openqa.selenium.TimeoutException;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,6 +43,10 @@ public class HomePage extends AbstractComponents {
 	//search result not found message WebElement
 	@FindBy(css = ".result")
 	WebElement searchErrorMessage;
+	
+	//search term less than minimum warning WebElement
+	@FindBy(css = ".warning")
+	WebElement searchWarningMessage;
 	
 	//breadcrumb text
 	@FindBy(css = ".current-item")
@@ -91,6 +95,25 @@ public class HomePage extends AbstractComponents {
 
 	// search product method
 	public String searchProduct(String searchText, String expectedProductName) {
+		
+	    if (searchText == null || searchText.isEmpty()) {
+	        searchBar.clear();
+	        searchBtn.click();
+
+	        Alert alert = driver.switchTo().alert();
+	        String alertMessage = alert.getText();
+	        alert.accept();
+	        return alertMessage;
+	    }
+	    
+	    if(searchText.length()<3) {
+			searchBar.clear();
+			searchBar.sendKeys(searchText);
+			searchBtn.click();
+			waitForElementToAppear(searchWarningMessage);
+			return searchWarningMessage.getText();
+	    }
+	    
 		searchBar.clear();
 		searchBar.sendKeys(searchText);
 		

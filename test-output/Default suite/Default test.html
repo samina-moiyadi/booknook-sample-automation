@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 17 10:09:32 IST 2025</td>
+<td>Started on:</td><td>Thu Jul 17 11:22:06 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11495 ms)</td>
+<tr><td>Total time:</td><td>51 seconds (51434 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByValidSearchTest()'><b>selectProductByValidSearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with valid data<br>Parameters: {searchText=tion, productName=Fiction}</td>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByLessSearchTest()'><b>selectProductByLessSearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with small search text (less than 3)<br>Parameters: {searchText=  , productName=null}</td>
 <td></td>
-<td>1</td>
-<td>com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a</td></tr>
+<td>0</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByNonExistentSearchTest()'><b>selectProductByNonExistentSearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with non-existent data<br>Parameters: {searchText=abc, productName=null}</td>
+<td></td>
+<td>6</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
 <tr>
 <td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByValidSearchTest()'><b>selectProductByValidSearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with valid data<br>Parameters: {searchText=comp, productName=Computing and Internet}</td>
 <td></td>
+<td>2</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByEmptySearchTest()'><b>selectProductByEmptySearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with empty search text<br>Parameters: {searchText=, productName=null}</td>
+<td></td>
+<td>0</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByLessSearchTest()'><b>selectProductByLessSearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with small search text (less than 3)<br>Parameters: {searchText=EX, productName=Fiction EX}</td>
+<td></td>
+<td>0</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByNonExistentSearchTest()'><b>selectProductByNonExistentSearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with non-existent data<br>Parameters: {searchText=xyz, productName=null}</td>
+<td></td>
+<td>6</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.searchWithInvalidExpectedProductTest()'><b>searchWithInvalidExpectedProductTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with data not matching expected product<br>Parameters: {searchText=book, productName=Fiction}</td>
+<td></td>
+<td>0</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByValidSearchTest()'><b>selectProductByValidSearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with valid data<br>Parameters: {searchText= EX, productName=Fiction EX}</td>
+<td></td>
 <td>1</td>
-<td>com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a</td></tr>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.searchWithInvalidExpectedProductTest()'><b>searchWithInvalidExpectedProductTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with data not matching expected product<br>Parameters: {searchText=fic, productName=Computing and Internet}</td>
+<td></td>
+<td>0</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.ProductSearchTest.selectProductByEmptySearchTest()'><b>selectProductByEmptySearchTest</b><br>Test class: com.testautomation.bookstore.tests.ProductSearchTest<br>Test method: Search product with empty search text<br>Parameters: {searchText=null, productName=null}</td>
+<td></td>
+<td>0</td>
+<td>com.testautomation.bookstore.tests.ProductSearchTest@815b41f</td></tr>
 </table><p>
 </body>
 </html>

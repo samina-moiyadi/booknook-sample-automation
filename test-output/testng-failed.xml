@@ -7,9 +7,9 @@
         <methods>
           <include name="tearDown"/>
           <include name="launchApplication"/>
-          <include name="selectProductByValidSearchTest" invocation-numbers="1"/>
           <include name="loginIfRequired"/>
           <include name="setupHomePage"/>
+          <include name="selectProductByLessSearchTest" invocation-numbers="2"/>
         </methods>
       </class> <!-- com.testautomation.bookstore.tests.ProductSearchTest -->
     </classes>

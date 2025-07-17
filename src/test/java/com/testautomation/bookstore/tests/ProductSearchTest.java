@@ -37,7 +37,7 @@ public class ProductSearchTest extends BaseTest{
 	    return getTestDataFromJson(filePath);
 	}
 	
-/*	@Test(description = "Search product with data not matching expected product",
+	@Test(description = "Search product with data not matching expected product",
 			dataProvider = "getMismatchedSearchData", groups = {"SearchProduct"})
 	public void searchWithInvalidExpectedProductTest(Map<String, String> input) {
 		String result = homePage.searchProduct(
@@ -45,6 +45,13 @@ public class ProductSearchTest extends BaseTest{
 				input.get("productName")
 			);
 		Assert.assertNull(result, "Expected product not found");
+	}
+	
+	//data provider method for product search with mismatched expected product
+	@DataProvider
+	public Object[][] getMismatchedSearchData() throws IOException {
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//productData//MismatchedSearchData.json";
+	    return getTestDataFromJson(filePath);
 	}
 	
 	@Test(description = "Search product with non-existent data",
@@ -60,11 +67,41 @@ public class ProductSearchTest extends BaseTest{
 	//data provider method for product search with valid data
 	@DataProvider
 	public Object[][] getNonExistentSearchData() throws IOException {
-		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//productData//NonExistentSearchData.json");
-		Object[][] testData = new Object[data.size()][1];
-	    for (int i = 0; i < data.size(); i++) {
-	        testData[i][0] = data.get(i);
-	    }
-	    return testData;
-	}*/
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//productData//NonExistentSearchData.json";
+	    return getTestDataFromJson(filePath);
+	}
+	
+	@Test(description = "Search product with empty search text",
+			dataProvider = "getEmptySearchData", groups = {"SearchProduct"})
+	public void selectProductByEmptySearchTest(Map<String, String> input) {
+		String error = homePage.searchProduct(
+				input.get("searchText"),
+				input.get("productName")
+			);
+		Assert.assertEquals(error, "Please enter some search keyword");
+	}
+	
+	//data provider method for product search with valid data
+	@DataProvider
+	public Object[][] getEmptySearchData() throws IOException {
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//productData//EmptySearchData.json";
+	    return getTestDataFromJson(filePath);
+	}
+	
+	@Test(description = "Search product with small search text (less than 3)",
+			dataProvider = "getLessSearchData", groups = {"SearchProduct"})
+	public void selectProductByLessSearchTest(Map<String, String> input) {
+		String error = homePage.searchProduct(
+				input.get("searchText"),
+				input.get("productName")
+			);
+		Assert.assertEquals(error, "Search term minimum length is 3 characters");
+	}
+	
+	//data provider method for product search with valid data
+	@DataProvider
+	public Object[][] getLessSearchData() throws IOException {
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//productData//LessSearchData.json";
+	    return getTestDataFromJson(filePath);
+	}
 }

@@ -1,0 +1,10 @@
+[
+	{
+		"searchText":"book",
+		"productName":"Fiction"
+	},
+	{
+		"searchText":"fic",
+		"productName":"Computing and Internet"
+	}
+]
