@@ -3,6 +3,7 @@ package com.testautomation.bookstore.abstractComponents;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.testautomation.bookstore.pageObjects.LoginPage;
 import com.testautomation.bookstore.pageObjects.RegistrationPage;
 
 public class AbstractComponents {
@@ -48,17 +50,24 @@ public class AbstractComponents {
 		wait.until(ExpectedConditions.visibilityOfAllElements(eles));
 	}
 	
+    //explicit wait for visibility of locator method
+	public void waitForLocatorToAppear(By locator, int TimeoutInSeconds)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(TimeoutInSeconds));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+	}
+	
 	//go to registration page method
 	public RegistrationPage goToRegistrationPage() {
 		waitForElementToAppear(register);
 		register.click();
-		RegistrationPage registrationPage = new RegistrationPage(driver);
-		return registrationPage;
+		return new RegistrationPage(driver);
 	}
 	
 	//go to login page method
-	public void goToLoginPage() {
+	public LoginPage goToLoginPage() {
 		waitForElementToAppear(login);
 		login.click();
+		return new LoginPage(driver);
 	}
 }

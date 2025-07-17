@@ -1,6 +1,7 @@
 package com.testautomation.bookstore.pageObjects;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,18 +28,39 @@ public class ProductListPage extends AbstractComponents {
 	@FindBy(id = "products-orderby")
 	WebElement sortByDropdn;
 	
-	// get a list of products
-	@FindBy(css = ".product-title")
-	List<WebElement> prodList;
+	//list of product names
+	@FindBy(css = ".product-title a")
+	List<WebElement> prodNames;
 	
+	//list of product prices
+	@FindBy(css = ".actual-price")
+	List<WebElement> prodPrices;
 	
-	/* method creation */
-
+	/* method creation */	
+	
 	// select sort by options
 	public String selectSortByDropdn(String sortByOption) {
 	    waitForElementToAppear(sortByDropdn);
 	    Select select = new Select(sortByDropdn);
 	    select.selectByVisibleText(sortByOption);
 	    return select.getFirstSelectedOption().getText();
+	}
+	
+	//get list of products based on sort option method
+	public List<String> getProductNames() {
+		return prodNames
+				.stream()
+				.map(WebElement::getText)
+				.collect(Collectors.toList());
+	}
+	
+	// Get product prices method 
+	public List<Double> getProductPrices() {
+	    return prodPrices
+	            .stream()
+	            .map(e -> e.getText().replaceAll("[^\\d.]", "")) 
+	            .filter(s -> !s.isEmpty())
+	            .map(Double::parseDouble)
+	            .collect(Collectors.toList());
 	}
 }

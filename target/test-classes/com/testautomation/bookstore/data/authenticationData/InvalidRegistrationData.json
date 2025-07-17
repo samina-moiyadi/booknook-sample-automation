@@ -109,5 +109,22 @@
 	"expectedErrors": [
 	  "Password is required."
 	]
+	},
+	{
+		"input":{
+		"gender":"",
+		"fName":"",
+		"lName":"",
+		"email":"",
+		"password":"",
+		"confirmPwd":""
+	},
+	"expectedErrors": [
+	  "First name is required.",
+	  "Last name is required.",
+	  "Email is required.",
+	  "Password is required.",
+	  "Password is required."
+	]
 	}
 ]

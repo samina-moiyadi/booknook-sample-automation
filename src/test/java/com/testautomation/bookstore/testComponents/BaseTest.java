@@ -22,6 +22,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.testautomation.bookstore.abstractComponents.AbstractComponents;
 import com.testautomation.bookstore.pageObjects.HomePage;
 import com.testautomation.bookstore.pageObjects.LoginPage;
 
@@ -30,8 +31,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
 	public WebDriver driver;
-	public LoginPage loginPage;
 	public HomePage homePage;
+	public AbstractComponents abstractComponents;
 
 	public WebDriver initializeDriver() throws IOException {
 
@@ -80,29 +81,28 @@ public class BaseTest {
 
 		// convert string to map using Jackson
 		ObjectMapper mapper = new ObjectMapper();
-		List<Map<String, Object>> data = mapper.readValue(jsonContent, new TypeReference<List<Map<String, Object>>>() {
-		});
+		return mapper.readValue(jsonContent, new TypeReference<List<Map<String, Object>>>() {});
 
-		return data;
 	}
 
 	@BeforeMethod(alwaysRun = true)
 	public void launchApplication() throws IOException {
 		driver = initializeDriver();
 		driver.get("https://demowebshop.tricentis.com/");
+		abstractComponents = new AbstractComponents(driver);
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		if (driver != null) {
-	        driver.quit();
-	    }
+			driver.quit();
+		}
 	}
-	
-	@BeforeMethod(alwaysRun = true, onlyForGroups = {"requires-login"})
+
+	@BeforeMethod(alwaysRun = true, onlyForGroups = { "requires-login" })
 	public void loginIfRequired() {
-	    LoginPage loginPage = new LoginPage(driver);
-	    homePage = loginPage.login("ABone@email.com", "A1Bone");
+		LoginPage loginPage = new LoginPage(driver);
+		homePage = loginPage.login("ABone@email.com", "A1Bone");
 	}
 
 	public static String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
@@ -112,5 +112,25 @@ public class BaseTest {
 		FileUtils.copyFile(source, new File(path));
 		return path;
 	}
+	
+	public Object[][] getTestDataFromJson(String filePath) throws IOException {
+	    List<Map<String, Object>> data = getJsonDataToMap(filePath);
+	    Object[][] testData = new Object[data.size()][1];
+	    for (int i = 0; i < data.size(); i++) {
+	        testData[i][0] = data.get(i);
+	    }
+	    return testData;
+	}
 
+	public Object[][] getStructuredTestData(String filePath, String inputKey, String outputKey) throws IOException {
+	    List<Map<String, Object>> testData = getJsonDataToMap(filePath);
+	    Object[][] data = new Object[testData.size()][2];
+
+	    for (int i = 0; i < testData.size(); i++) {
+	        data[i][0] = testData.get(i).get(inputKey);
+	        data[i][1] = testData.get(i).get(outputKey);
+	    }
+
+	    return data;
+	}
 }

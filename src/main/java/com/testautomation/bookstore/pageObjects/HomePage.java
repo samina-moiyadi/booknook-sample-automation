@@ -1,6 +1,7 @@
 package com.testautomation.bookstore.pageObjects;
 
 import java.util.List;
+import org.openqa.selenium.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -46,11 +47,38 @@ public class HomePage extends AbstractComponents {
 	//breadcrumb text
 	@FindBy(css = ".current-item")
 	WebElement breadcrumbNavText;
+	
+	/*Locator creation*/
+	//searchBar locator
+	By searchAutoSuggProductsLocator = By.cssSelector(".ui-autocomplete li");
 
 	/* method creation */
 
 	// select category by name method
-	public String getCatogoryByName(String categoryName) {
+//	public void navigateToCategoryOrSubcategory(String categoryName, String subcategoryName) {
+//	    List<WebElement> mainCategories = driver.findElements(By.cssSelector(".top-menu li a"));
+//	    for (WebElement category : mainCategories) {
+//	        if (category.getText().equalsIgnoreCase(categoryName)) {
+//	            Actions actions = new Actions(driver);
+//	            actions.moveToElement(category).perform();
+//
+//	            if (subcategoryName != null && !subcategoryName.isBlank()) {
+//	                List<WebElement> subCategories = category.findElements(By.xpath("../ul/li/a"));
+//	                for (WebElement sub : subCategories) {
+//	                    if (sub.getText().equalsIgnoreCase(subcategoryName)) {
+//	                        sub.click();
+//	                        return;
+//	                    }
+//	                }
+//	            } else {
+//	                category.click(); // If no subcategory provided
+//	                return;
+//	            }
+//	        }
+//	    }
+//	}
+	
+	public String getCategoryByName(String categoryName) {
 		List<WebElement> categories = driver.findElements(By.xpath("//ul[@class='top-menu']/li"));
 		WebElement cat = categories.stream()
 				.filter(category -> category.findElement(By.cssSelector("a")).getText()
@@ -61,24 +89,34 @@ public class HomePage extends AbstractComponents {
 		return breadcrumbNavText.getText();
 	}
 
-	// search by partial text method
-	public String searchWithPartialText(String searchText, String productName) {
+	// search product method
+	public String searchProduct(String searchText, String expectedProductName) {
+		searchBar.clear();
 		searchBar.sendKeys(searchText);
-		waitForElementsToAppear(searchAutoSuggProducts);
-		WebElement product = searchAutoSuggProducts.stream()
-				.filter(pro->pro.findElement(By.cssSelector("a")).getText()
-				.trim().contains(productName))
-				.findFirst().orElse(null);
-		product.click();
-		waitForElementToAppear(productTitle);
-		return productTitle.getText();		
-	}
+		
+		try {
+			waitForLocatorToAppear(searchAutoSuggProductsLocator, 5);
+	        List<WebElement> suggestions = driver.findElements(searchAutoSuggProductsLocator);
+	        
+	        for (WebElement suggestion : suggestions) {
+	            WebElement link = suggestion.findElement(By.cssSelector("a"));
+	            String linkText = link.getText().trim();
+	            if (expectedProductName != null && linkText.contains(expectedProductName)) {
+	                link.click();
+	                waitForElementToAppear(productTitle);
+	                return productTitle.getText();
+	            }
+	        }
+	        return null;
+		
+		}catch (TimeoutException e) {
+			searchBtn.click();
+			waitForElementToAppear(searchErrorMessage);
+			return searchErrorMessage.getText();
+
+		}
 	
-	public String searchWithNonExistantProduct(String searchText) {
-		searchBar.sendKeys(searchText);
-		searchBtn.click();
-		waitForElementToAppear(searchErrorMessage);
-		return searchErrorMessage.getText();
+		 
 	}
 
 }

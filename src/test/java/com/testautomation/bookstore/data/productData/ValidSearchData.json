@@ -1,10 +1,10 @@
 [
 	{
-		"searchText":"comput",
-		"productName":"Computing and Internet"
-	},
-	{
 		"searchText":"tion",
 		"productName":"Fiction"
+	},
+	{
+		"searchText":"comp",
+		"productName":"Computing and Internet"
 	}
 ]

@@ -19,7 +19,7 @@ public class CategoryNavigationTest extends BaseTest{
 	@Test(dataProvider = "getCategory", groups = {"CategoryNavigation","requires-login"}, retryAnalyzer = (com.testautomation.bookstore.testComponents.Retry.class))
 	public void categoryPageNavigation(Map<String, String> input) {
 		String category = input.get("category");
-		String navText = homePage.getCatogoryByName(category);
+		String navText = homePage.getCategoryByName(category);
 		a.assertTrue(driver.getTitle().contains(category));
 		//String text = driver.getCurrentUrl().split("/")[3];
 		//a.assertTrue(text.equalsIgnoreCase(category));

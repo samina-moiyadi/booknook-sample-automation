@@ -1,0 +1,12 @@
+[
+  {
+    "categoryName": "Books",
+    "subcategoryName": "",
+    "sortOption": "Name: A to Z"
+  },
+  {
+    "categoryName": "Computers",
+    "subcategoryName": "Desktops",
+    "sortOption": "Price: Low to High"
+  }
+]

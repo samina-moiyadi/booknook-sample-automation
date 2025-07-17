@@ -1,35 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-12T11:15:29 IST" name="Default suite" finished-at="2025-06-12T11:15:37 IST" duration-ms="8036">
+  <suite started-at="2025-07-17T10:09:32 IST" name="Default suite" finished-at="2025-07-17T10:09:43 IST" duration-ms="11495">
     <groups>
-      <group name="requires-login">
-        <method signature="ProductListingTest.sortProductListTest()[pri:0, instance:com.testautomation.bookstore.tests.ProductListingTest@408d971b]" name="sortProductListTest" class="com.testautomation.bookstore.tests.ProductListingTest"/>
-      </group> <!-- requires-login -->
-      <group name="SortProductList">
-        <method signature="ProductListingTest.sortProductListTest()[pri:0, instance:com.testautomation.bookstore.tests.ProductListingTest@408d971b]" name="sortProductListTest" class="com.testautomation.bookstore.tests.ProductListingTest"/>
-      </group> <!-- SortProductList -->
+      <group name="SearchProduct">
+        <method signature="ProductSearchTest.selectProductByValidSearchTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" name="selectProductByValidSearchTest" class="com.testautomation.bookstore.tests.ProductSearchTest"/>
+      </group> <!-- SearchProduct -->
     </groups>
-    <test started-at="2025-06-12T11:15:29 IST" name="Default test" finished-at="2025-06-12T11:15:37 IST" duration-ms="8036">
-      <class name="com.testautomation.bookstore.tests.ProductListingTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductListingTest@408d971b]" started-at="2025-06-12T11:15:29 IST" name="launchApplication" finished-at="2025-06-12T11:15:33 IST" duration-ms="4085" status="PASS">
+    <test started-at="2025-07-17T10:09:32 IST" name="Default test" finished-at="2025-07-17T10:09:43 IST" duration-ms="11495">
+      <class name="com.testautomation.bookstore.tests.ProductSearchTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:32 IST" name="launchApplication" finished-at="2025-07-17T10:09:36 IST" duration-ms="3685" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method is-config="true" signature="loginIfRequired()[pri:0, instance:com.testautomation.bookstore.tests.ProductListingTest@408d971b]" started-at="2025-06-12T11:15:33 IST" name="loginIfRequired" finished-at="2025-06-12T11:15:35 IST" duration-ms="1581" status="PASS">
+        <test-method is-config="true" signature="setupHomePage()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:36 IST" name="setupHomePage" finished-at="2025-07-17T10:09:36 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginIfRequired -->
-        <test-method signature="sortProductListTest()[pri:0, instance:com.testautomation.bookstore.tests.ProductListingTest@408d971b]" started-at="2025-06-12T11:15:35 IST" name="sortProductListTest" finished-at="2025-06-12T11:15:37 IST" duration-ms="2083" status="PASS">
+        </test-method> <!-- setupHomePage -->
+        <test-method signature="selectProductByValidSearchTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:36 IST" name="selectProductByValidSearchTest" description="Search product with valid data" data-provider="getValidSearchData" finished-at="2025-07-17T10:09:38 IST" duration-ms="1886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{searchText=tion, productName=Fiction}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sortProductListTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductListingTest@408d971b]" started-at="2025-06-12T11:15:37 IST" name="tearDown" finished-at="2025-06-12T11:15:37 IST" duration-ms="237" status="PASS">
+        </test-method> <!-- selectProductByValidSearchTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:38 IST" name="tearDown" finished-at="2025-07-17T10:09:38 IST" duration-ms="177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.testautomation.bookstore.tests.ProductListingTest -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:38 IST" name="launchApplication" finished-at="2025-07-17T10:09:41 IST" duration-ms="3622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="setupHomePage()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:41 IST" name="setupHomePage" finished-at="2025-07-17T10:09:41 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupHomePage -->
+        <test-method signature="selectProductByValidSearchTest(java.util.Map)[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:41 IST" name="selectProductByValidSearchTest" description="Search product with valid data" data-provider="getValidSearchData" finished-at="2025-07-17T10:09:43 IST" duration-ms="1803" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{searchText=comp, productName=Computing and Internet}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectProductByValidSearchTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testautomation.bookstore.tests.ProductSearchTest@2d1ef81a]" started-at="2025-07-17T10:09:43 IST" name="tearDown" finished-at="2025-07-17T10:09:43 IST" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.testautomation.bookstore.tests.ProductSearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

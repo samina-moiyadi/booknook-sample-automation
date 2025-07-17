@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -22,10 +23,16 @@ public class AuthenticationTest extends BaseTest {
 	
 	/*registration test cases*/
 	
-	//test for registration with valid data - positive
-	@Test(dataProvider = "getValidRegistrationData", groups = {"Registration"}, retryAnalyzer = (com.testautomation.bookstore.testComponents.Retry.class))
+	@BeforeMethod(onlyForGroups = "Registration")
+	public void navigateToRegistration() {
+	    registrationPage = abstractComponents.goToRegistrationPage();
+	}
+	
+	@Test(description = "Register a user with valid data",
+			dataProvider = "getValidRegistrationData", 
+			groups = {"Registration"}, 
+			retryAnalyzer = (com.testautomation.bookstore.testComponents.Retry.class))
 	public void registerValidUserTest(Map<String, String> input) throws IOException {
-		registrationPage = new RegistrationPage(driver);
 		registrationPage.completeRegistration(
 				input.get("gender"),
 				input.get("fName"),
@@ -40,18 +47,13 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for registration with valid data
 	@DataProvider
 	public Object[][] getValidRegistrationData() throws IOException {
-		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//ValidRegistrationData.json");
-		Object[][] testData = new Object[data.size()][1];
-	    for (int i = 0; i < data.size(); i++) {
-	        testData[i][0] = data.get(i);
-	    }
-	    return testData;
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//ValidRegistrationData.json";
+	    return getTestDataFromJson(filePath);
 	}
 	
-	//test for registration with invalid data - negative (field level validation) 
-	@Test(dataProvider = "getInvalidRegistrationData", groups = {"Registration"})
+	@Test(description = "Register a user with invalid data (field level validation)",
+			dataProvider = "getInvalidRegistrationData", groups = {"Registration"})
 	public void registerInvalidUserTest(Map<String, String> input, List<String> expectedErrors) throws IOException {
-		registrationPage = new RegistrationPage(driver);
 		registrationPage.completeRegistration(
 				input.get("gender"),
 				input.get("fName"),
@@ -70,44 +72,56 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for registration with invalid data (field level validation)
 	@DataProvider
 	public Object[][] getInvalidRegistrationData() throws IOException {
-			List<Map<String, Object>> testData = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidRegistrationData.json");
-		    Object[][] data = new Object[testData.size()][2];
-
-		    for (int i = 0; i < testData.size(); i++) {
-		        Map<String, Object> item = testData.get(i);
-		        @SuppressWarnings("unchecked")
-		        Map<String, String> input = (Map<String, String>) item.get("input");
-
-		        @SuppressWarnings("unchecked")
-		        List<String> expectedErrors = (List<String>) item.get("expectedErrors");
-
-		        data[i][0] = input;
-		        data[i][1] = expectedErrors;
-		    }
-
-		    return data;
+			String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidRegistrationData.json";
+			return getStructuredTestData(filePath, "input", "expectedErrors");
 		}
 		
-	//test for registration with invalid data - negative (duplicate email id)
-	@Test(groups = {"Registration"})
-	public void registerWithDuplicateEmailTest() {
-	    registrationPage = new RegistrationPage(driver);
+	@Test(description = "Register a user with duplicate email id",
+			dataProvider = "getDuplicateEmailData", groups = {"Registration"})
+	public void registerWithDuplicateEmailTest(Map<String, String> input) {
 	    String email = "test" + System.currentTimeMillis() + "@example.com";
-	    registrationPage.completeRegistration("Female", "XY", "XY", email, "ABCDEF", "ABCDEF");
+	    
+	    registrationPage.completeRegistration(
+				input.get("gender"),
+				input.get("fName"),
+				input.get("lName"),
+				email,
+				input.get("password"),
+				input.get("confirmPwd"));
 
 	    registrationPage.navigateToRegisterPage();
-	    registrationPage.completeRegistration("Female", "XY", "XY", email, "ABCDEF", "ABCDEF");
+	    
+	    registrationPage.completeRegistration(
+				input.get("gender"),
+				input.get("fName"),
+				input.get("lName"),
+				email,
+				input.get("password"),
+				input.get("confirmPwd"));
 
 	    String actualError = registrationPage.getDuplicateEmailError();
 	    Assert.assertEquals(actualError, "The specified email already exists");
 	}
 	
+	//Data provider method for registration with duplicate email id
+	@DataProvider
+	public Object[][] getDuplicateEmailData() throws IOException {
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//DuplicateRegistrationData.json";
+	    return getTestDataFromJson(filePath);
+	}
+	
 	
 	/*login test cases*/
-	//test for login with valid data - positive
-	@Test(dataProvider = "getValidLoginData", groups = {"Login"})
+	
+	@BeforeMethod(onlyForGroups = "Login")
+	public void navigateToLogin() {
+	    loginPage = abstractComponents.goToLoginPage();
+	}
+	
+	@Test(description = "Login a user with valid email and password",
+			dataProvider = "getValidLoginData", groups = {"Login"})
 	public void loginValidUserTest(Map<String, String> input) throws IOException {
-		loginPage = new LoginPage(driver);
+		loginPage = abstractComponents.goToLoginPage();
 		loginPage.login(
 				input.get("email"),
 				input.get("password")
@@ -118,18 +132,14 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for login with valid data
 	@DataProvider
 	public Object[][] getValidLoginData() throws IOException {
-		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//ValidLoginData.json");
-		Object[][] testData = new Object[data.size()][1];
-	    for (int i = 0; i < data.size(); i++) {
-	        testData[i][0] = data.get(i);
-	    }
-	    return testData;
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//ValidLoginData.json";
+	    return getTestDataFromJson(filePath);
 	}
 	
-	//test for login with invalid email - negative
-	@Test(dataProvider = "getInvalidEmailLoginData", groups = {"Login"})
+	@Test(description = "Login a user with invalid email (field level validation)",
+			dataProvider = "getInvalidEmailLoginData", groups = {"Login"})
 	public void invalidEmailFormat_showsFieldErrorTest(Map<String, String> input) throws IOException {
-		loginPage = new LoginPage(driver);
+		loginPage = abstractComponents.goToLoginPage();
 		loginPage.login(
 				input.get("email"),
 				input.get("password")
@@ -142,18 +152,14 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for login with invalid email data
 	@DataProvider
 	public Object[][] getInvalidEmailLoginData() throws IOException {
-		List<Map<String, Object>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidEmailLoginData.json");
-		Object[][] testData = new Object[data.size()][1];
-	    for (int i = 0; i < data.size(); i++) {
-	        testData[i][0] = data.get(i);
-	    }
-	    return testData;
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidEmailLoginData.json";
+	    return getTestDataFromJson(filePath);
 	}
 	
-	//test for login with invalid login details - negative
-	@Test(dataProvider = "getInvalidLoginData", groups = {"Login"})
+	@Test(description = "Login a user with invalid email and password (form level validation)",
+			dataProvider = "getInvalidLoginData", groups = {"Login"})
 	public void invalidLoginData_showsFormLevelErrorsTest(Map<String, String> input, List<String> expectedErrors) throws IOException {
-		loginPage = new LoginPage(driver);
+		loginPage = abstractComponents.goToLoginPage();
 		loginPage.login(
 				input.get("email"),
 				input.get("password")
@@ -171,27 +177,14 @@ public class AuthenticationTest extends BaseTest {
 	//data provider method for login with empty password data
 	@DataProvider
 	public Object[][] getInvalidLoginData() throws IOException {
-		List<Map<String, Object>> testData = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidLoginData.json");
-	    Object[][] data = new Object[testData.size()][2];
-
-	    for (int i = 0; i < testData.size(); i++) {
-	        Map<String, Object> item = testData.get(i);
-	        @SuppressWarnings("unchecked")
-	        Map<String, String> input = (Map<String, String>) item.get("input");
-
-	        @SuppressWarnings("unchecked")
-	        List<String> expectedErrors = (List<String>) item.get("expectedErrors");
-
-	        data[i][0] = input;
-	        data[i][1] = expectedErrors;
-	    }
-	    return data;
+		String filePath = System.getProperty("user.dir") + "//src//test//java//com//testautomation//bookstore//data//authenticationData//InvalidLoginData.json";
+		return getStructuredTestData(filePath, "input", "expectedErrors");
 	}
 	
-	//test for successful logout
-	@Test(groups = {"Login"})
+	@Test(description = "Logout successfully",
+			groups = {"Login"})
 	public void testLogout() {
-		loginPage = new LoginPage(driver);
+		loginPage = abstractComponents.goToLoginPage();	
 		loginPage.login("ABone@email.com","A1Bone");
 		String actualText = loginPage.logout();
 		Assert.assertEquals(actualText, "Log in");

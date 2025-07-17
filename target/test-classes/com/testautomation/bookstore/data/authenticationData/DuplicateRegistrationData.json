@@ -1,0 +1,9 @@
+[
+  {
+    "gender": "Male",
+    "fName": "XY",
+    "lName": "XY",
+    "password": "ABCDEF",
+    "confirmPwd": "ABCDEF"
+  }
+]

@@ -1,18 +1,10 @@
 [
 	{
 		"gender":"Female",
-		"fName":"Efour",
-		"lName":"Ffour",
-		"email":"EFfour@email.com",
-		"password":"E4Ffour",
-		"confirmPwd":"E4Ffour"
-	},
-	{
-		"gender":"Male",
-		"fName":"Efive",
-		"lName":"Ffive",
-		"email":"EFfive@email.com",
-		"password":"E5Ffive",
-		"confirmPwd":"E5Ffive"
+		"fName":"Ione",
+		"lName":"Jone",
+		"email":"IJone@email.com",
+		"password":"I1Jone",
+		"confirmPwd":"I1Jone"
 	}
 ]
