@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -51,9 +52,11 @@ public class AuthenticationTest extends BaseTest {
 	    return getTestDataFromJson(filePath);
 	}
 	
-	@Test(description = "Register a user with invalid data (field level validation)",
+	@Test(description = "Field-level registration validations (namely, first name, last name, email, password, confirm password validations) via data-driven tests",
 			dataProvider = "getInvalidRegistrationData", groups = {"Registration"})
 	public void registerInvalidUserTest(Map<String, String> input, List<String> expectedErrors) throws IOException {
+		Reporter.log("Input data: " + input.toString(), true);
+		
 		registrationPage.completeRegistration(
 				input.get("gender"),
 				input.get("fName"),
@@ -156,7 +159,7 @@ public class AuthenticationTest extends BaseTest {
 	    return getTestDataFromJson(filePath);
 	}
 	
-	@Test(description = "Login a user with invalid email and password (form level validation)",
+	@Test(description = "Form-level login validations (namely, email, password) via data-driven tests",
 			dataProvider = "getInvalidLoginData", groups = {"Login"})
 	public void invalidLoginData_showsFormLevelErrorsTest(Map<String, String> input, List<String> expectedErrors) throws IOException {
 		loginPage = abstractComponents.goToLoginPage();

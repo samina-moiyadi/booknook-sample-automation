@@ -19,6 +19,15 @@
 	},
 	{
 		"input":{
+		"email": null,
+		"password":"A2Btwo"
+	},
+	"expectedErrors": [
+			"No customer account found"
+	]
+	},
+	{
+		"input":{
 		"email":"PQ@email.com",
 		"password":"PQthree"
 	},
@@ -37,11 +46,38 @@
 	},
 	{
 		"input":{
+		"email":"ABone@email.com",
+		"password": null
+	},
+	"expectedErrors": [
+		"The credentials provided are incorrect"
+	]
+	},
+	{
+		"input":{
 		"email":"ABtwo@email.com",
 		"password":"A1Bone"
 	},
 	"expectedErrors": [
 		"The credentials provided are incorrect"
+	]
+	},
+	{
+		"input":{
+		"email":"",
+		"password":""
+	},
+	"expectedErrors": [
+		"No customer account found"
+	]
+	},
+	{
+		"input":{
+		"email": null,
+		"password": null
+	},
+	"expectedErrors": [
+		"No customer account found"
 	]
 	}
 ]

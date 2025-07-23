@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jun 01 08:48:50 IST 2025</td>
+<td>Started on:</td><td>Wed Jul 23 13:06:55 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19687 ms)</td>
+<tr><td>Total time:</td><td>78 seconds (78170 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,80 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testautomation.bookstore.tests.AthenticationTest.loginValidUserTest()'><b>loginValidUserTest</b><br>Test class: com.testautomation.bookstore.tests.AthenticationTest<br>Parameters: {email=ABone@email.com, password=A1Bone}</td>
-<td></td>
-<td>2</td>
-<td>com.testautomation.bookstore.tests.AthenticationTest@1f2586d6</td></tr>
-<tr>
-<td title='com.testautomation.bookstore.tests.AthenticationTest.loginValidUserTest()'><b>loginValidUserTest</b><br>Test class: com.testautomation.bookstore.tests.AthenticationTest<br>Parameters: {email=XYtwo@email.com, password=X2Ytwo}</td>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidEmailFormat_showsFieldErrorTest()'><b>invalidEmailFormat_showsFieldErrorTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Field-level registration validations (namely, email, password) via data-driven tests<br>Parameters: {email=ABone, password=A1Bone}</td>
 <td></td>
 <td>1</td>
-<td>com.testautomation.bookstore.tests.AthenticationTest@1f2586d6</td></tr>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=PQ@email.com, password=PQthree}, [No customer account found]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=, password=A2Btwo}, [No customer account found]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=, password=}, [No customer account found]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=ABone@email.com, password=}, [The credentials provided are incorrect]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.loginValidUserTest()'><b>loginValidUserTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with valid email and password<br>Parameters: {email=XYtwo@email.com, password=X2Ytwo}</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.testLogout()'><b>testLogout</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Logout successfully</td>
+<td></td>
+<td>2</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidEmailFormat_showsFieldErrorTest()'><b>invalidEmailFormat_showsFieldErrorTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Field-level registration validations (namely, email, password) via data-driven tests<br>Parameters: {email=A.in, password=A1Bone}</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=null, password=null}, [No customer account found]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=ABtwo@email.com, password=A1Bone}, [The credentials provided are incorrect]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=ABone@email.com, password=ABone}, [The credentials provided are incorrect]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=null, password=A2Btwo}, [No customer account found]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidEmailFormat_showsFieldErrorTest()'><b>invalidEmailFormat_showsFieldErrorTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Field-level registration validations (namely, email, password) via data-driven tests<br>Parameters: {email=A@B, password=A2Btwo}</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.invalidLoginData_showsFormLevelErrorsTest()'><b>invalidLoginData_showsFormLevelErrorsTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with invalid email and password (form level validation)<br>Parameters: {email=ABone@email.com, password=null}, [The credentials provided are incorrect]</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
+<tr>
+<td title='com.testautomation.bookstore.tests.AuthenticationTest.loginValidUserTest()'><b>loginValidUserTest</b><br>Test class: com.testautomation.bookstore.tests.AuthenticationTest<br>Test method: Login a user with valid email and password<br>Parameters: {email=ABone@email.com, password=A1Bone}</td>
+<td></td>
+<td>1</td>
+<td>com.testautomation.bookstore.tests.AuthenticationTest@44c03695</td></tr>
 </table><p>
 </body>
 </html>

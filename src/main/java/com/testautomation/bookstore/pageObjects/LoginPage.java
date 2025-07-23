@@ -68,12 +68,18 @@ public class LoginPage extends AbstractComponents{
 	
 	//enter login email method
 	public void enterLoginEmail(String email) {
-		loginEmail.sendKeys(email);
+		if (email != null)
+			loginEmail.sendKeys(email);
+		else
+			loginEmail.sendKeys("");
 	}
 	
 	//enter login password method
 	public void enterLoginPassword(String password) {
-		loginPassword.sendKeys(password);
+		if (password != null)
+			loginPassword.sendKeys(password);
+		else
+			loginPassword.sendKeys("");
 	}
 	
     //click log in button method

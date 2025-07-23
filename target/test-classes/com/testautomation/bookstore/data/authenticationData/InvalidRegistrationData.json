@@ -16,8 +16,36 @@
 	{
 		"input":{
 		"gender":"Male",
+		"fName": null,
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password":"A3Bthree",
+		"confirmPwd":"A3Bthree"
+	},
+	"expectedErrors": [
+	  "First name is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
 		"fName":"Athree",
 		"lName":"",
+		"email":"ABthree@email.com",
+		"password":"A3Bthree",
+		"confirmPwd":"A3Bthree"
+	},
+	"expectedErrors": [
+	  "Last name is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName": null,
 		"email":"ABthree@email.com",
 		"password":"A3Bthree",
 		"confirmPwd":"A3Bthree"
@@ -33,6 +61,20 @@
 		"fName":"Athree",
 		"lName":"BThree",
 		"email":"",
+		"password":"A3Bthree",
+		"confirmPwd":"A3Bthree"
+	},
+	"expectedErrors": [
+	  "Email is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Female",
+		"fName":"Athree",
+		"lName":"BThree",
+		"email": null,
 		"password":"A3Bthree",
 		"confirmPwd":"A3Bthree"
 	},
@@ -62,6 +104,20 @@
 		"lName":"Bthree",
 		"email":"ABthree@email.com",
 		"password":"",
+		"confirmPwd":""
+	},
+	"expectedErrors": [
+	  "Password is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password": null,
 		"confirmPwd":""
 	},
 	"expectedErrors": [
@@ -110,6 +166,21 @@
 	  "Password is required."
 	]
 	},
+	
+	{
+		"input":{
+		"gender":"Male",
+		"fName":"Athree",
+		"lName":"Bthree",
+		"email":"ABthree@email.com",
+		"password":"A3Bthree",
+		"confirmPwd": null
+	},
+	"expectedErrors": [
+	  "Password is required."
+	]
+	},
+	
 	{
 		"input":{
 		"gender":"",
@@ -118,6 +189,24 @@
 		"email":"",
 		"password":"",
 		"confirmPwd":""
+	},
+	"expectedErrors": [
+	  "First name is required.",
+	  "Last name is required.",
+	  "Email is required.",
+	  "Password is required.",
+	  "Password is required."
+	]
+	},
+	
+	{
+		"input":{
+		"gender": null,
+		"fName": null,
+		"lName": null,
+		"email": null,
+		"password": null,
+		"confirmPwd": null
 	},
 	"expectedErrors": [
 	  "First name is required.",

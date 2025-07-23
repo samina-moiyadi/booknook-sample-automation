@@ -79,37 +79,52 @@ public class RegistrationPage extends AbstractComponents{
 	
 	//select gender method
 	public void selectGender(String gender) {
-		if(gender.equalsIgnoreCase("Male")) {
-			genderMale.click();
-		}
-		else if(gender.equalsIgnoreCase("Female")) {
-			genderFemale.click();
+		if(gender != null) {
+			if(gender.equalsIgnoreCase("Male"))
+				genderMale.click();
+			else if(gender.equalsIgnoreCase("Female"))
+				genderFemale.click();
 		}
 	}
 	
 	//enter first name method
 	public void enterFirstName(String fName) {
-		firstName.sendKeys(fName);
+		if (fName != null)
+			firstName.sendKeys(fName);
+		else
+			firstName.sendKeys("");
 	}
 	
 	//enter last name method
 	public void enterLastName(String lName) {
-		lastName.sendKeys(lName);
+		if (lName != null)
+			lastName.sendKeys(lName);
+		else
+			lastName.sendKeys("");
 	}
 	
 	//enter email method
 	public void enterEmail(String email) {
-		userEmail.sendKeys(email);
+		if (email != null)
+			userEmail.sendKeys(email);
+		else
+			userEmail.sendKeys("");
 	}
 	
 	//enter password method
     public void enterPassword(String password) {
-        userPassword.sendKeys(password);
+		if (password != null)
+			userPassword.sendKeys(password);
+		else
+			userPassword.sendKeys("");
     }
 
     //enter confirm password method
     public void enterConfirmPassword(String confirmPwd) {
-        confirmPassword.sendKeys(confirmPwd);
+		if (confirmPwd != null)
+			confirmPassword.sendKeys(confirmPwd);
+		else
+			confirmPassword.sendKeys("");
     }
     
     //click register button method
