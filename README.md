@@ -1,4 +1,4 @@
-This repository stores test cases for a book selling e-commerce website.
+This repository stores test cases for an e-commerce website.
 # ✅ Test Case Checklist – Online Bookstore Automation
 
 This document outlines the key test cases covered in the Selenium + Java test automation project for an online bookstore-style application.
@@ -22,5 +22,3 @@ This document outlines the key test cases covered in the Selenium + Java test au
 - [✅] Search product with search string length less than 3
 
 ---
-
-> 📌 Tip: Check off the boxes as you implement test cases.
