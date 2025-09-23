@@ -1,6 +1,6 @@
 # booknook-sample-automation (Authentication & Product Search)
 
-![Java Badge](https://img.shields.io/badge/Java-17-blue) ![Maven Badge](https://img.shields.io/badge/Maven-3.9.2-blue) ![Build Badge](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Java Badge](https://img.shields.io/badge/Java-21-blue) ![Maven Badge](https://img.shields.io/badge/Maven-3.9.2-blue) ![Build Badge](https://img.shields.io/badge/Build-Passing-brightgreen)
 
 ## Project Overview
 
