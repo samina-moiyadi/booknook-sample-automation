@@ -76,8 +76,8 @@ mvn test
 ## Sample Screenshots
 
 * **Authentication Screenshots:**
-  ![Login Test Screenshot](reports/registerValidUserTest.png)
-  ![Duplicate Registration Test](reports/registerWithDuplicateEmailTest.png)
+  <img width="1920" height="893" alt="registerWithDuplicateEmailTest" src="https://github.com/user-attachments/assets/90dd9bab-267c-44cc-9f45-6c9eb6e56e8e" />
+  
 * **Product Search Screenshots:**
   ![Search Test Screenshot](reports/selectProductByValidSearchTest.png)
   ![Sort Test Screenshot](reports/sortProductListTest.png)
